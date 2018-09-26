@@ -17,6 +17,8 @@ public class PropertiesUtil {
 
     private static Properties props;
 
+    // static 静态代码块的作用是Tomcat启动就加载
+    // 执行顺序：静态代码块(当类被加载的时候被执行且只执行一次)---》普通代码块---》构造代码块(每次构造都要执行)
     static {
         String fileName = "mmall.properties";
         props = new Properties();
