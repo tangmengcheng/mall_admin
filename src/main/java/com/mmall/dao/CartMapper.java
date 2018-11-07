@@ -37,5 +37,8 @@ public interface CartMapper {
     // 注意：如果购物车中quantity数量为空时，基本类型是不能接受0的【可以换成Integer】
     int selectCartProductCount(@Param("userId") Integer userId);
 
+    // 获取购物车中已经被勾选的产品
+    List<Cart> selectCheckedCartByUserId(Integer userId);
+
 
 }
